@@ -15,7 +15,55 @@
   gtag('config', 'G-D55WBK1NLS');
 </script>
 <body>
-    <h1>Welcome to My Dummy Website</h1>
-    <p>This is a simple webpage for testing Google Analytics.</p>
+   <h1>Resume Builder</h1>
+    
+    <!-- Form for Resume Input -->
+    <form id="resumeForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="education">Education:</label>
+        <textarea id="education" name="education" rows="4" required></textarea>
+
+        <label for="experience">Experience:</label>
+        <textarea id="experience" name="experience" rows="4" required></textarea>
+
+        <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+
+    <!-- Display Generated Resume -->
+    <div id="generatedResume"></div>
+
+    <!-- JavaScript for Resume Generation -->
+    <script>
+        function generateResume() {
+            // Get values from the form
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const education = document.getElementById('education').value;
+            const experience = document.getElementById('experience').value;
+
+            // Create a simple resume structure (you can customize this)
+            const resume = `
+                <h2>${fullName}</h2>
+                <p>Email: ${email}</p>
+                <p>Phone: ${phone}</p>
+                <h3>Education</h3>
+                <p>${education}</p>
+                <h3>Experience</h3>
+                <p>${experience}</p>
+            `;
+
+            // Display the generated resume
+            document.getElementById('generatedResume').innerHTML = resume;
+        }
+    </script>
 </body>
 </html>
