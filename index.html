@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dummy Website for Google Analytics</title>
+     <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #e62429; /* Spider-Man red */
+        }
+
+        #clickCount {
+            font-size: 24px;
+        }
+
+        button {
+            background-color: #007bff; /* Spider-Man blue */
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
 </head>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D55WBK1NLS"></script>
@@ -18,8 +47,11 @@
         <h1>Welcome to My Dummy Website</h1>
     <p>This is a simple webpage for testing Google Analytics.</p>
 
-    <h2>Welcome to the Clicker Counter</h1>
+   <h2>Welcome to the Spider-Man Clicker Counter</h2>
     
+    <!-- Spider-Man Image -->
+    <img src="spiderman-logo.png" alt="Spider-Man Logo" width="200">
+
     <!-- Counter Display -->
     <p>Clicks: <span id="clickCount">0</span></p>
 
@@ -29,16 +61,13 @@
     <!-- JavaScript for Clicker Counter -->
     <script>
         let clickCount = 0;
-        let multiplier = 1;
 
         function handleClick() {
             // Increase click count
             clickCount++;
 
-            }
-
             // Update the counter display
-            document.getElementById('clickCount').innerText = clickCount * multiplier;
+            document.getElementById('clickCount').innerText = clickCount;
         }
     </script>
 </body>
